@@ -9,4 +9,10 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+
+    @Test public void testAppIsBroken() {
+        App classUnderTest = new App();
+        throw new RuntimeException("she is broken");
+        //assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
 }
